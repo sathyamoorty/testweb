@@ -1,91 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #1e1e1e;
-  color: white;
-  position: sticky;
-  top: 0;
-}
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">MySite</div>
 
-/* Logo */
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
+    <!-- Hamburger Toggle -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-/* Nav links */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
+    <!-- Menu -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
+  <!-- Content -->
+  <main class="content">
+    <h1>Responsive Mobile Webpage</h1>
+    <p>This is a sample page with a mobile responsive navbar.</p>
+  </main>
 
-.nav-links a:hover {
-  color: #00d9ff;
-}
-
-/* Hamburger hidden in desktop */
-#menu-toggle {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 5px;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #1e1e1e;
-    flex-direction: column;
-    gap: 0;
-    display: none;
-  }
-
-  .nav-links a {
-    padding: 15px;
-    border-top: 1px solid #333;
-  }
-  /* Toggle menu */
-  #menu-toggle:checked ~ .nav-links {
-    display: flex;
-  }
-}
-
-/* Page Content */
-.content {
-  padding: 30px 20px;
-}
+</body>
+</html>
